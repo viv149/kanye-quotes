@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="{{url('assets/style.css')}}">
     </head>
     <body>
+        @include('header')
         <section class="login min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
             <div class="container">
                 <div class="row justify-content-center">

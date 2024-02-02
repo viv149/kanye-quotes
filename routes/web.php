@@ -15,12 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [AuthController::class, 'Index']);
+Route::get('/', [AuthController::class, 'Index'])->name('registerView');
+Route::post('register', [AuthController::class, 'RegisterStore'])->name('registerStore');
+Route::get('login-page', [AuthController::class, 'loginView'])->name('loginPage');
 Route::post('login', [AuthController::class, 'Store'])->name('login');
+
 
 Route::group(['middleware' => 'auth'], function(){
 
-    
+    Route::get('quotes', [KanyeQuoteController::class, 'index'])->name('quotes');
 });
-Route::get('quotes', [KanyeQuoteController::class, 'index'])->name('quotes');
 
