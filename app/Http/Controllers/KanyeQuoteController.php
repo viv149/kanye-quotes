@@ -10,15 +10,6 @@ class KanyeQuoteController extends Controller
 {
     // protected $apiUrl = 'https://api.kanye.rest/';
 
-    // protected function getRandomQuotes($count = 5)
-    // {
-    //     $response = Http::withoutVerifying()->get($this->apiUrl . 'quotes', [
-    //         'count' => $count,
-    //     ]);
-
-    //     return $response->body(); // Return JSON string
-    // }
-
     public function index()
     {
        // Read the contents of the quotes.json file
@@ -29,7 +20,7 @@ class KanyeQuoteController extends Controller
 
         // Get 5 random keys from the array
         $randomKeys = array_rand($quotes, 5);
-
+        // dd($randomKeys);
         // Initialize an empty array to store the randomly selected quotes
         $randomQuotes = [];
 
