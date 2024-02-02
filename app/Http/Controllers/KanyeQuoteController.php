@@ -20,6 +20,7 @@ class KanyeQuoteController extends Controller
 
         // Get 5 random keys from the array
         $randomKeys = array_rand($quotes, 5);
+            
         // dd($randomKeys);
         // Initialize an empty array to store the randomly selected quotes
         $randomQuotes = [];
