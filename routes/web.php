@@ -19,6 +19,7 @@ Route::get('/', [AuthController::class, 'Index'])->name('registerView');
 Route::post('register', [AuthController::class, 'RegisterStore'])->name('registerStore');
 Route::get('login-page', [AuthController::class, 'loginView'])->name('loginPage');
 Route::post('login', [AuthController::class, 'Store'])->name('login');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 
 Route::group(['middleware' => 'auth'], function(){
